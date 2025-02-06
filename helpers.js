@@ -24,10 +24,10 @@ const is_perfect = (number) => {
 
 //check if number is armstrong
 const is_armstrong = (number) =>{
-    // if (number < 0) return false;
-    const digits =  Math.abs(number).toString().split('').map(Number)
+    const absNum = Math.abs(number)
+    const digits =  absNum.toString().split('').map(Number)
     const power = digits.length
-    return digits.reduce((sum, digit)=> sum + Math.pow(digit, power), 0) === number;
+    return digits.reduce((sum, digit)=> sum + Math.pow(digit, power), 0) === absNum;
 }
 
 //get number properties

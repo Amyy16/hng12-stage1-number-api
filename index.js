@@ -12,14 +12,14 @@ const port = process.env.PORT || 3000;
 
 
 app.get("/api/classify-number", async (req, res) => {
-    const num = req.query.number; 
-    if (num === undefined || num === null) {
-        return res.status(400).json({ number: "alphabet", error: true});
+    const num = req.query.number
+    const number = parseInt(num);
+    if (isNaN(number) || number.toString() !== num) {
+        return res.status(400).json({ number:"alphabet",error: true})
     }
-    const number = Number(num);
-    if (!Number.isInteger(number)) {
-        return res.status(400).json({ number: "alphabet", error: true });
-    }
+    // if (!Number.isInteger(num)) {
+    //     return res.status(400).json({ number: "alphabet", error: true });
+    // }
     try {
         const funFact = await getFunfact(number);
         const response = {
