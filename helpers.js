@@ -33,11 +33,11 @@ const is_armstrong = (number) =>{
 //get number properties
 const getProperties = (number) => {
     let properties = []
-    if(is_armstrong(number)) properties.push('Armstrong')
+    if(is_armstrong(number)) properties.push('armstrong')
     if(number % 2 === 0){
-        properties.push('Even')
+        properties.push('even')
     }else{
-        properties.push('Odd')
+        properties.push('odd')
     }
     return properties
 }
