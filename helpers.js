@@ -24,8 +24,8 @@ const is_perfect = (number) => {
 
 //check if number is armstrong
 const is_armstrong = (number) =>{
-    if (number < 0) return false;
-    const digits = number.toString().split('').map(Number)
+    // if (number < 0) return false;
+    const digits =  Math.abs(number).toString().split('').map(Number)
     const power = digits.length
     return digits.reduce((sum, digit)=> sum + Math.pow(digit, power), 0) === number;
 }
