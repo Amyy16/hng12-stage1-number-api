@@ -1,7 +1,7 @@
 # NUMBER CLASSIFICATION API
 
 This is a simple public API that takes a number and returns interesting mathematical properties about it, along with a fun fact from [Number API](http://numbersapi.com/#42).<br>
-The project was built with Express.js and deployed on vercel.
+The project was built with Express.js and deployed on Vercel.
 
 ## Features
 This API takes a query number which is a valid integer and returns the following: <br>
